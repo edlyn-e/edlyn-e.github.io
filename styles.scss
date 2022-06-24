@@ -1,0 +1,121 @@
+* {
+    font-family: "PT Mono", monospace;
+    background-color: #f7ede2;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        display: flex;
+        padding: 0px 0px 0px 20px;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__menu-item {
+        padding: 0px 15px;
+    }
+}
+
+.section {
+    border: 2px solid red;
+    padding: 20px 25px;
+    height: auto;
+    margin: 10px 0px;
+
+    &__title {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+
+.about-me {
+    &__heading {
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+
+        &--img {
+            padding: 15px;
+        }
+
+        &--text {
+            width: 500px;
+        }
+    }
+}
+
+.tech-stack {
+    &__gallery {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        &--item {
+            margin: 0px 20px;
+        }
+    }
+}
+
+.project {
+    &__content {
+        display: flex;
+        justify-content: center;
+
+        &--gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+}
+
+.footer {
+    &--title {
+        text-align: center;
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    &--para {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &--nav {
+        display: flex;
+        justify-content: center;
+
+        &__list {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+        }
+
+        &__list-item {
+            margin: 0px 15px;
+            float: left;
+        }
+    }
+}

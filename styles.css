@@ -1,0 +1,99 @@
+* {
+  font-family: "PT Mono", monospace;
+  background-color: #f7ede2;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar__logo {
+  display: flex;
+  padding: 0px 0px 0px 20px;
+}
+.nav-bar__list {
+  list-style-type: none;
+  display: flex;
+}
+.nav-bar__menu-item {
+  padding: 0px 15px;
+}
+
+.section {
+  border: 2px solid red;
+  padding: 20px 25px;
+  height: auto;
+  margin: 10px 0px;
+}
+.section__title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.landing {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.about-me__heading {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+.about-me__content {
+  display: flex;
+  justify-content: center;
+}
+.about-me__content--img {
+  padding: 15px;
+}
+.about-me__content--text {
+  width: 500px;
+}
+
+.tech-stack__gallery {
+  display: flex;
+  justify-content: center;
+}
+.tech-stack__gallery ul {
+  display: flex;
+  list-style-type: none;
+}
+.tech-stack__gallery--item {
+  margin: 0px 20px;
+}
+
+.project__content {
+  display: flex;
+  justify-content: center;
+}
+.project__content--gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.footer--title {
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+.footer--para {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer--nav {
+  display: flex;
+  justify-content: center;
+}
+.footer--nav__list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+.footer--nav__list-item {
+  margin: 0px 15px;
+  float: left;
+}
