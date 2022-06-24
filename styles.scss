@@ -23,10 +23,9 @@
 }
 
 .section {
-    border: 2px solid red;
-    padding: 20px 25px;
+    padding: 100px 25px;
     height: auto;
-    margin: 10px 0px;
+    margin: auto;
 
     &__title {
         font-weight: bold;
@@ -35,29 +34,28 @@
 }
 
 .landing {
-    display: flex;
-    align-items: center;
     height: 500px;
+    display: flex;
+    &__content {
+    }
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .about-me {
-    &__heading {
-        font-size: large;
-        font-weight: bold;
-        text-align: center;
-    }
-
     &__content {
         display: flex;
         justify-content: center;
+    }
 
-        &--img {
-            padding: 15px;
-        }
+    &__img {
+        padding: 20px;
+    }
 
-        &--text {
-            width: 500px;
-        }
+    &__text {
+        padding: 0px 10px;
+        max-width: 500px;
     }
 }
 
