@@ -64,26 +64,48 @@
         display: flex;
         justify-content: center;
 
+        .icon {
+            margin: 0px 15px;
+        }
+
         ul {
             display: flex;
             list-style-type: none;
-        }
-
-        &--item {
-            margin: 0px 20px;
         }
     }
 }
 
 .project {
-    &__content {
+    .project-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__item {
+        background-color: #f6bd60;
+        max-width: 360px;
+        padding: 30px;
+        border-radius: 20px;
+        margin: 15px;
+        img {
+            display: block;
+            margin: auto;
+            border: 5px solid white;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin: 10px;
+    }
+
+    &__footer {
         display: flex;
         justify-content: center;
 
-        &--gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 10px;
+        .icon {
+            display: flex;
+            padding: 10px;
         }
     }
 }

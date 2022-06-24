@@ -52,22 +52,42 @@
   display: flex;
   justify-content: center;
 }
+.tech-stack__gallery .icon {
+  margin: 0px 15px;
+}
 .tech-stack__gallery ul {
   display: flex;
   list-style-type: none;
 }
-.tech-stack__gallery--item {
-  margin: 0px 20px;
-}
 
-.project__content {
+.project .project-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.project__item {
+  background-color: #f6bd60;
+  max-width: 360px;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 15px;
+}
+.project__item img {
+  display: block;
+  margin: auto;
+  border: 5px solid white;
+}
+.project__text {
+  text-align: center;
+  margin: 10px;
+}
+.project__footer {
   display: flex;
   justify-content: center;
 }
-.project__content--gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+.project__footer .icon {
+  display: flex;
+  padding: 10px;
 }
 
 .footer--title {
