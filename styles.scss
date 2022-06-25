@@ -28,6 +28,23 @@
 
     &__menu-item {
         padding: 15px 15px;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-weight: bolder;
+            text-shadow: 5px 5px 5px #84a59d;
+        }
+
+        a:active {
+            color: #c97b84;
+        }
+
+        a:visited {
+            color: #84a59d;
+        }
     }
 }
 
