@@ -67,7 +67,6 @@
 }
 .tech-stack .tech-gallery .tech-item {
   display: flex;
-  margin: auto;
   margin-top: 30px;
   margin-left: 20px;
 }
