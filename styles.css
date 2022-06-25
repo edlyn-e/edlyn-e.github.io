@@ -48,26 +48,31 @@
 .about-me__text {
   margin: 0px 10px;
   max-width: 600px;
-  line-height: 20pt;
+  line-height: 15pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tech-stack .tech-gallery {
   display: flex;
   margin: auto;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 .tech-stack .tech-gallery .tech-item {
   display: flex;
+  margin: auto;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 .tech-stack .tech-gallery .tech-item h4 {
   line-height: 5px;
 }
 .tech-stack .tech-gallery .tech-item__icon {
-  margin-left: 50px;
-  margin-right: 15px;
+  padding-right: 15px;
 }
 
 .project {
@@ -91,12 +96,13 @@
   border: 5px solid white;
 }
 .project__item:hover {
-  width: 330px;
+  width: 350px;
   border: 4px solid #f6bd60;
 }
 .project__text {
   text-align: center;
   margin: 10px;
+  line-height: 15pt;
 }
 .project__footer {
   display: flex;
