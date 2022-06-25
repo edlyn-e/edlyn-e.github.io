@@ -38,6 +38,7 @@
 .about-me__content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .about-me__img {
   padding: 20px;
@@ -50,16 +51,23 @@
   line-height: 20pt;
 }
 
-.tech-stack__gallery {
+.tech-stack .tech-gallery {
   display: flex;
+  margin: auto;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
-.tech-stack__gallery .icon {
-  margin: 0px 15px;
-}
-.tech-stack__gallery ul {
+.tech-stack .tech-gallery .tech-item {
   display: flex;
-  list-style-type: none;
+}
+.tech-stack .tech-gallery .tech-item h4 {
+  line-height: 5px;
+}
+.tech-stack .tech-gallery .tech-item__icon {
+  margin-left: 50px;
+  margin-right: 15px;
 }
 
 .project {

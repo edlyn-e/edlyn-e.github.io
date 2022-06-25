@@ -42,6 +42,7 @@
 .landing {
     height: 500px;
     display: flex;
+
     &__content {
     }
     justify-content: center;
@@ -53,6 +54,7 @@
     &__content {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     &__img {
@@ -69,17 +71,26 @@
 }
 
 .tech-stack {
-    &__gallery {
+    .tech-gallery {
         display: flex;
+        margin: auto;
         justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
 
-        .icon {
-            margin: 0px 15px;
-        }
+        margin-top: 50px;
 
-        ul {
+        .tech-item {
             display: flex;
-            list-style-type: none;
+
+            h4 {
+                line-height: 5px;
+            }
+
+            &__icon {
+                margin-left: 50px;
+                margin-right: 15px;
+            }
         }
     }
 }
