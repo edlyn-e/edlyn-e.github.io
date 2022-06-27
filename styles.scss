@@ -1,13 +1,12 @@
+@use "palette";
+
+$border: 2px solid black;
+$border-secondary: 2px solid blue;
+$border-tertiary: 2px solid green;
+
 * {
     font-family: "PT Mono", monospace;
 }
-
-// Colour Palette colours:
-// #F6BD60 Maximum Yellow Red
-// #F7EDE2 Linen
-// #562C2C Caput Mortuum
-// #84A59D Morning Blue
-// #C97B84 Old Rose
 
 .nav-bar {
     display: flex;
@@ -35,15 +34,15 @@
 
         a:hover {
             font-weight: bolder;
-            text-shadow: 5px 5px 5px #84a59d;
+            text-shadow: 5px 5px 5px palette.$midTone;
         }
 
         a:active {
-            color: #c97b84;
+            color: palette.$accentColor;
         }
 
         a:visited {
-            color: #84a59d;
+            color: palette.$midToneTwo;
         }
     }
 }
@@ -94,17 +93,16 @@
 .tech-stack {
     .tech-gallery {
         display: flex;
-        // margin: auto;
+
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
 
         margin-top: 50px;
-        // border: 2px solid black;
 
         .tech-item {
             display: flex;
-            // border: 2px solid green;
+
             margin-top: 30px;
             margin-left: 20px;
 
@@ -139,13 +137,12 @@
         img {
             display: block;
             margin: auto;
-            border: 5px solid white;
         }
     }
 
     &__item:hover {
         width: 350px;
-        border: 4px solid #f6bd60;
+        border: 2px solid palette.$mainColor;
     }
 
     &__text {
@@ -159,15 +156,14 @@
         justify-content: center;
 
         .project-code-btn {
-            border: 1px solid #84a59d;
             border-radius: 25px;
-            width: 60px;
+            width: 40px;
             margin: 10px;
         }
 
         .project-code-btn:hover {
-            width: 80px;
-            box-shadow: 3px 3px 20px #84a59d;
+            width: 70px;
+            box-shadow: 3px 3px 20px palette.$midTone;
         }
 
         .icon {

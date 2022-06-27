@@ -25,13 +25,13 @@
 }
 .nav-bar__menu-item a:hover {
   font-weight: bolder;
-  text-shadow: 5px 5px 5px #84a59d;
+  text-shadow: 5px 5px 5px #96897b;
 }
 .nav-bar__menu-item a:active {
-  color: #c97b84;
+  color: #628395;
 }
 .nav-bar__menu-item a:visited {
-  color: #84a59d;
+  color: #cf995f;
 }
 
 .section {
@@ -108,11 +108,10 @@
 .project__item img {
   display: block;
   margin: auto;
-  border: 5px solid white;
 }
 .project__item:hover {
   width: 350px;
-  border: 4px solid #f6bd60;
+  border: 2px solid #dbad6a;
 }
 .project__text {
   text-align: center;
@@ -124,14 +123,13 @@
   justify-content: center;
 }
 .project__footer .project-code-btn {
-  border: 1px solid #84a59d;
   border-radius: 25px;
-  width: 60px;
+  width: 40px;
   margin: 10px;
 }
 .project__footer .project-code-btn:hover {
-  width: 80px;
-  box-shadow: 3px 3px 20px #84a59d;
+  width: 70px;
+  box-shadow: 3px 3px 20px #96897b;
 }
 .project__footer .icon {
   display: flex;

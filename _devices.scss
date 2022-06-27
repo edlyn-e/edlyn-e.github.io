@@ -1,0 +1,15 @@
+$smlScreen: 600px;
+$mdScreen: 768px;
+$lgScreen: 992px;
+
+@media only screen and (max-width: $smlScreen) {
+    @content;
+}
+
+@media only screen and (min-width: $mdScreen) {
+    @content;
+}
+
+@media only screen and (min-width: $lgScreen) {
+    @content;
+}
