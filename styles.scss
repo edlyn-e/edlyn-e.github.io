@@ -1,24 +1,35 @@
 @use "palette";
 
+// commonly used variables for planning and seeing where and how elements move
 $border: 2px solid black;
 $border-secondary: 2px solid blue;
 $border-tertiary: 2px solid green;
 
+// mixins
 @mixin flex-wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-// experiment with this later to avoid too much repetition
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
 
+@mixin flex-justify-align-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+// css stuff starts here
 * {
     font-family: "PT Mono", monospace;
 }
 
 .nav-bar {
-    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    @include flex-wrap;
 
     &__logo {
         display: flex;
@@ -27,9 +38,8 @@ $border-tertiary: 2px solid green;
 
     &__list {
         list-style-type: none;
-        display: flex;
         justify-content: flex-end;
-        flex-wrap: wrap;
+        @include flex-wrap;
     }
 
     &__menu-item {
@@ -37,7 +47,6 @@ $border-tertiary: 2px solid green;
 
         a {
             text-decoration: none;
-            color: palette.$accentColor;
         }
 
         a:hover {
@@ -67,24 +76,23 @@ $border-tertiary: 2px solid green;
 }
 
 .landing {
+    @include flex-center;
     height: 500px;
-    display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .about-me {
     &__content {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         flex-wrap: wrap;
     }
 
     &__img {
-        padding: 20px;
+        margin: 30px;
         height: 250px;
         width: 250px;
+        border-radius: 50%;
     }
 
     &__text {
@@ -100,12 +108,8 @@ $border-tertiary: 2px solid green;
 
 .tech-stack {
     .tech-gallery {
-        display: flex;
-
-        justify-content: center;
-        align-content: center;
+        @include flex-justify-align-center;
         flex-wrap: wrap;
-
         margin-top: 50px;
 
         .tech-item {
@@ -129,9 +133,8 @@ $border-tertiary: 2px solid green;
     max-width: max-content;
 
     .project-content {
-        display: flex;
+        @include flex-wrap;
         justify-content: center;
-        flex-wrap: wrap;
     }
     &__item {
         width: 300px;
@@ -139,8 +142,8 @@ $border-tertiary: 2px solid green;
         border-radius: 20px;
         margin: 30px;
 
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: palette.$midTone 0px 20px 45px -15px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
         img {
             display: block;
@@ -149,7 +152,8 @@ $border-tertiary: 2px solid green;
     }
 
     &__item:hover {
-        box-shadow: 0px 13px 15px 5px palette.$midTone;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 60px -12px inset,
+            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 
     &__text {
@@ -159,8 +163,7 @@ $border-tertiary: 2px solid green;
     }
 
     &__footer {
-        display: flex;
-        justify-content: center;
+        @include flex-justify-align-center;
 
         .project-code-btn {
             border-radius: 25px;
@@ -170,12 +173,12 @@ $border-tertiary: 2px solid green;
 
         .project-code-btn:hover {
             width: 70px;
-            box-shadow: 3px 3px 20px palette.$midTone;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 30px -12px inset,
+                rgba(0, 0, 0, 0.3) 0px 9px 19px -9px inset;
         }
 
         .icon {
-            display: flex;
-            justify-content: center;
+            @include flex-center;
             padding: 10px;
         }
     }
@@ -189,14 +192,11 @@ $border-tertiary: 2px solid green;
     }
 
     &--para {
-        display: flex;
-        justify-content: center;
         text-align: center;
     }
 
     &--nav {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
 
         &__list {
             list-style-type: none;
