@@ -1,9 +1,9 @@
 @use "palette";
 
 // commonly used variables for planning and seeing where and how elements move
-$border: 2px solid black;
-$border-secondary: 2px solid blue;
-$border-tertiary: 2px solid green;
+$border: 1px solid black;
+$border-secondary: 1px solid blue;
+$border-tertiary: 1px solid green;
 
 // mixins
 @mixin flex-wrap {
@@ -22,6 +22,28 @@ $border-tertiary: 2px solid green;
     align-content: center;
 }
 
+// placeholder-classes
+%button-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    border-radius: 30%;
+    height: 50px;
+    width: 60px;
+}
+
+%button-style-hover {
+    font-weight: bolder;
+    background-color: white;
+    box-shadow: 3px 3px palette.$midTone;
+}
+
+%button-style-focus {
+    border: 1px solid palette.$midTone;
+    box-shadow: 2px 2px inset palette.$midTone;
+}
 // css stuff starts here
 * {
     font-family: "PT Mono", monospace;
@@ -33,34 +55,31 @@ $border-tertiary: 2px solid green;
 
     &__logo {
         display: flex;
-        padding: 0px 20px 0px 20px;
+
+        h1 {
+            padding: 0px 20px 0px 20px;
+        }
     }
 
     &__list {
+        @include flex-justify-align-center;
         list-style-type: none;
-        justify-content: flex-end;
-        @include flex-wrap;
     }
 
     &__menu-item {
-        padding: 15px 15px;
+        @include flex-justify-align-center;
+        padding: 5px 3px;
+        margin: 5px 30px 15px 0px;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
 
-        a:hover {
-            font-weight: bolder;
-            text-shadow: 5px 5px 5px palette.$midTone;
-        }
-
-        a:active {
-            color: palette.$accentColor;
-        }
-
-        a:visited {
-            color: palette.$midToneTwo;
-        }
+    &__menu-item:hover {
+        letter-spacing: 5px;
     }
 }
 
@@ -142,18 +161,19 @@ $border-tertiary: 2px solid green;
         border-radius: 20px;
         margin: 30px;
 
-        box-shadow: palette.$midTone 0px 20px 45px -15px,
-            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border: 1px solid palette.$midTone;
 
         img {
             display: block;
             margin: auto;
+            border: 5px solid white;
         }
     }
 
     &__item:hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 60px -12px inset,
-            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        background-color: palette.$accentColorTwo;
+        border: 1px solid palette.$midTone;
+        box-shadow: palette.$midTone 5px 5px;
     }
 
     &__text {
@@ -166,37 +186,45 @@ $border-tertiary: 2px solid green;
         @include flex-justify-align-center;
 
         .project-code-btn {
-            border-radius: 25px;
-            width: 40px;
-            margin: 10px;
+            @extend %button-style;
         }
 
         .project-code-btn:hover {
-            width: 70px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 30px -12px inset,
-                rgba(0, 0, 0, 0.3) 0px 9px 19px -9px inset;
+            @extend %button-style-hover;
+        }
+
+        .project-code-btn:focus-within {
+            @extend %button-style-focus;
         }
 
         .icon {
-            @include flex-center;
-            padding: 10px;
+            color: black;
+            text-decoration: none;
         }
     }
 }
 
 .footer {
-    &--title {
-        text-align: center;
-        font-size: larger;
-        font-weight: bold;
+    h4 {
+        font-size: 25px;
+        margin: 0px;
     }
-
     &--para {
         text-align: center;
     }
 
     &--nav {
         @include flex-center;
+
+        a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+        }
 
         &__list {
             list-style-type: none;
@@ -205,8 +233,18 @@ $border-tertiary: 2px solid green;
         }
 
         &__list-item {
-            margin: 0px 15px;
-            float: left;
+            @extend %button-style;
+
+            height: 60px;
+        }
+
+        &__list-item:hover {
+            @extend %button-style-hover;
+            background-color: palette.$accentColor;
+        }
+
+        &__list-item:focus-within {
+            @extend %button-style-focus;
         }
     }
 }
