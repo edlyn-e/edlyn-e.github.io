@@ -4,6 +4,13 @@ $border: 2px solid black;
 $border-secondary: 2px solid blue;
 $border-tertiary: 2px solid green;
 
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// experiment with this later to avoid too much repetition
+
 * {
     font-family: "PT Mono", monospace;
 }
@@ -30,6 +37,7 @@ $border-tertiary: 2px solid green;
 
         a {
             text-decoration: none;
+            color: palette.$accentColor;
         }
 
         a:hover {
@@ -141,8 +149,7 @@ $border-tertiary: 2px solid green;
     }
 
     &__item:hover {
-        width: 350px;
-        border: 2px solid palette.$mainColor;
+        box-shadow: 0px 13px 15px 5px palette.$midTone;
     }
 
     &__text {
