@@ -42,7 +42,7 @@ $border-tertiary: 1px solid green;
 
 %button-style-focus {
     border: 1px solid palette.$midTone;
-    box-shadow: 2px 2px inset palette.$midTone;
+    box-shadow: 3px 3px inset palette.$midTone;
 }
 // css stuff starts here
 * {
@@ -76,6 +76,10 @@ $border-tertiary: 1px solid green;
         text-decoration: none;
         color: black;
         font-weight: bold;
+    }
+
+    a:hover {
+        color: palette.$accentColor;
     }
 
     &__menu-item:hover {
@@ -157,9 +161,9 @@ $border-tertiary: 1px solid green;
     }
     &__item {
         width: 300px;
-        padding: 30px;
+        padding: 50px;
         border-radius: 20px;
-        margin: 30px;
+        margin: 20px;
 
         border: 1px solid palette.$midTone;
 
@@ -171,9 +175,10 @@ $border-tertiary: 1px solid green;
     }
 
     &__item:hover {
-        background-color: palette.$accentColorTwo;
+        background-color: palette.$accentColor;
         border: 1px solid palette.$midTone;
         box-shadow: palette.$midTone 5px 5px;
+        color: white;
     }
 
     &__text {
@@ -184,6 +189,7 @@ $border-tertiary: 1px solid green;
 
     &__footer {
         @include flex-justify-align-center;
+        margin-bottom: -25px;
 
         .project-code-btn {
             @extend %button-style;
