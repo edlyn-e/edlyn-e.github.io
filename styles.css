@@ -17,7 +17,7 @@
 
 .footer--nav__list-item:focus-within, .project__footer .project-code-btn:focus-within {
   border: 1px solid #96897b;
-  box-shadow: 2px 2px inset #96897b;
+  box-shadow: 3px 3px inset #96897b;
 }
 
 * {
@@ -52,6 +52,9 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+.nav-bar a:hover {
+  color: #628395;
 }
 .nav-bar__menu-item:hover {
   letter-spacing: 5px;
@@ -124,9 +127,9 @@
 }
 .project__item {
   width: 300px;
-  padding: 30px;
+  padding: 50px;
   border-radius: 20px;
-  margin: 30px;
+  margin: 20px;
   border: 1px solid #96897b;
 }
 .project__item img {
@@ -135,9 +138,10 @@
   border: 5px solid white;
 }
 .project__item:hover {
-  background-color: #d0ce7c;
+  background-color: #628395;
   border: 1px solid #96897b;
   box-shadow: #96897b 5px 5px;
+  color: white;
 }
 .project__text {
   text-align: center;
@@ -148,6 +152,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-bottom: -25px;
 }
 .project__footer .icon {
   color: black;
