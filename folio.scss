@@ -1,0 +1,286 @@
+@use "palette";
+
+// commonly used variables
+$border: 2px solid palette.$background-card;
+$border-hover: 2px solid palette.$background-card-hover;
+
+$border-secondary: 2px solid blue;
+$border-tertiary: 2px solid green;
+
+// mixins - consolidates to the same element
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+@mixin line-height {
+    line-height: 20px;
+}
+
+@mixin relative {
+    position: relative;
+}
+// placeholder classes - lists as another 'element'
+
+// umbrella css
+html {
+    scroll-behavior: smooth;
+    background-color: palette.$background;
+}
+
+* {
+    font-family: "PT Mono", monospace;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: palette.$heading;
+    font-weight: bold;
+}
+
+// BEM styling
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    &__logo {
+        padding: 10px 40px;
+    }
+
+    &__list {
+        @include flex;
+    }
+
+    &__menu-item {
+        @extend .nav-bar__menu-item;
+        @include menu;
+        @include relative;
+
+        border-radius: 10px;
+    }
+
+    &__menu-item:hover {
+        background-color: palette.$background-card;
+        color: palette.$background;
+        box-shadow: 2px 2px palette.$background-card-shadow;
+    }
+
+    &__menu-item:focus-within {
+        background-color: palette.$background-card-shadow;
+    }
+}
+
+.section {
+    padding: 100px 25px;
+    height: auto;
+    margin: auto;
+
+    &__title {
+        font-size: xx-large;
+        text-align: center;
+        letter-spacing: 3px;
+        padding-bottom: 15px;
+    }
+}
+
+.landing {
+    @include flex;
+    background-color: palette.$background-card;
+    height: 90vh;
+    align-items: center;
+    text-align: center;
+    color: palette.$background;
+
+    &__content-para {
+        padding: 3px;
+    }
+}
+
+.about-me {
+    &__content {
+        @include flex;
+    }
+
+    &__img {
+        margin: 30px;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        @include line-height;
+        @include flex;
+        max-width: 600px;
+
+        p {
+            padding-bottom: 25px;
+        }
+    }
+}
+
+.tech-stack {
+    background-color: palette.$background-card;
+    color: palette.$background;
+
+    .tech-gallery {
+        @include flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .tech-item {
+        margin: 10px 30px 20px 10px;
+        font-size: 15px;
+
+        &__icon {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.project {
+    .project-content {
+        @include flex;
+    }
+
+    &__item {
+        position: relative;
+
+        border: $border;
+        border-radius: 20px;
+        background-color: palette.$background-card;
+        max-width: 350px;
+
+        padding: 40px 20px 20px 20px;
+        margin: 20px;
+
+        h4 {
+            color: palette.$background;
+        }
+
+        p {
+            @extend h4;
+        }
+
+        a {
+            @extend h4;
+        }
+
+        img {
+            border: 10px solid palette.$background;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &__item:hover {
+        top: -15px;
+
+        background-color: palette.$background-card-hover;
+        border: $border-hover;
+        box-shadow: 7px 7px palette.$background-card-shadow;
+
+        h4 {
+            color: palette.$heading;
+        }
+
+        p {
+            @extend h4;
+        }
+
+        a {
+            @extend h4;
+        }
+    }
+
+    &__text {
+        @include line-height;
+        text-align: center;
+        margin: 20px;
+
+        .project__text-title {
+            font-size: large;
+            padding: 10px 0px;
+        }
+    }
+
+    &__footer {
+        @include flex;
+        padding: 15px;
+
+        a {
+            @include relative;
+            padding: 15px;
+        }
+
+        a:hover {
+            color: palette.$background;
+        }
+
+        a:focus {
+            color: palette.$heading;
+            top: 3px;
+        }
+    }
+}
+
+.footer {
+    background-color: palette.$background-card;
+    color: palette.$background;
+
+    text-align: center;
+
+    h2 {
+        padding: 20px;
+    }
+
+    &--contacts {
+    }
+
+    &--contacts-icons {
+        @include flex;
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            @include relative;
+            font-size: x-large;
+            color: palette.$background;
+        }
+
+        a:hover {
+            color: palette.$background-card-hover;
+            text-shadow: 2px 2px palette.$background-card-shadow;
+            top: -5px;
+        }
+
+        a:focus {
+            color: palette.$background-card-shadow;
+        }
+    }
+
+    p {
+        padding: 20px;
+    }
+}
