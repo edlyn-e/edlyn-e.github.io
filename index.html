@@ -6,28 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Edlyn Evangelista | Portfolio</title>
         <link rel="stylesheet" href="folio.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Karla&family=PT+Mono&display=swap" rel="stylesheet">
-        <script
-            src="https://kit.fontawesome.com/78a04382fc.js"
-            crossorigin="anonymous"
-        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Karla&family=PT+Mono&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
     <body>
         <header>
-            <nav class="nav-bar" >
-               
-                <div class="nav-bar__logo">
-                    <h1> <a href="https://edlyn-e.github.io/">edlyn-e</a> </h1>
-                </div>
-                <ul class="nav-bar__list">
-                    <li ><a href="#aboutMe" class="nav-bar__menu-item" >About me</a></li>
-                    <li ><a href="#skills" class="nav-bar__menu-item">Skills</a></li>
-                    <li ><a href="#projects" class="nav-bar__menu-item">Projects</a></li>
-                    <li ><a href="#contact" class="nav-bar__menu-item"> Contact</a></li>
+            <!-- Logo and Navigation Bar  -->
+
+            <nav class="nav-bar" role="navigation">
+                <h1 class="nav-bar__logo">
+                    <a href="https://edlyn-e.github.io/">edlyn-e</a>
+                </h1>
+
+                <ul class="nav-bar__menu">
+                    <li>
+                        <a href="#aboutMe" class="nav-bar__menu-item"
+                            >About me</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-bar__menu-item">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-bar__menu-item"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-bar__menu-item">
+                            Contact</a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
+
         <main>
             <!-- The landing space -->
             <article class="landing section">
@@ -46,25 +62,31 @@
             <article class="about-me section" id="aboutMe">
                 <h2 class="section__title">About me</h2>
                 <div class="about-me__content">
-                    <img
-                        class="about-me__img"
-                        src="IMG_3154.PNG"
-                    />
+                    <img class="about-me__img" src="IMG_3154.PNG" />
                     <!-- brief profile here about me -->
                     <div class="about-me__text">
                         <p>
-                            Hey, I'm Edlyn! It's great to meet you. I'm an Arts graduate from the University of South Australia and a software developer in the making with _nology.
+                            Hey, I'm Edlyn! It's great to meet you. I'm an Arts
+                            graduate from the University of South Australia and
+                            a software developer in the making with _nology.
                         </p>
                         <p>
-                           I graduated in 2019 with a Bachelor of Arts (Languages) and double majored in Sociology and Japanese. There's just something about seeing and getting to know how things work. why they are the way that they are, and it fascinates me to no end. The tech world is bursting at the seams with incredible potential as we move forward into the future, and I want to be a part of it.
+                            I graduated in 2019 with a Bachelor of Arts
+                            (Languages) and double majored in Sociology and
+                            Japanese. There's just something about seeing and
+                            getting to know how things work. why they are the
+                            way that they are, and it fascinates me to no end.
+                            The tech world is bursting at the seams with
+                            incredible potential as we move forward into the
+                            future, and I want to be a part of it.
                         </p>
-                        </div>
+                    </div>
                 </div>
             </article>
 
             <!-- Tech Skills: Languages I know and such -->
 
-            <article class="tech-stack section"  id="skills">
+            <article class="tech-stack section" id="skills">
                 <h2 class="section__title">I can code in these languages:</h2>
 
                 <div class="tech-gallery">
@@ -72,9 +94,11 @@
                         <i class="fa-brands fa-html5 fa-3x tech-item__icon"></i>
                         <h4>HTML5</h4>
                     </div>
-                
-                     <div class="tech-item">
-                        <i class="fa-brands fa-css3-alt fa-3x tech-item__icon"></i>
+
+                    <div class="tech-item">
+                        <i
+                            class="fa-brands fa-css3-alt fa-3x tech-item__icon"
+                        ></i>
                         <h4>CSS</h4>
                     </div>
 
@@ -91,16 +115,16 @@
                     </div>
 
                     <div class="tech-item">
-                        <i class="fa-solid fa-note-sticky fa-3x tech-item__icon"></i>
+                        <i
+                            class="fa-solid fa-note-sticky fa-3x tech-item__icon"
+                        ></i>
                         <h4>language item</h4>
                     </div>
-                </div>
-                    
                 </div>
             </article>
 
             <!-- Project Section: Gallery -->
-            <article class="project section"  id="projects">
+            <article class="project section" id="projects">
                 <h2 class="section__title">My projects</h2>
 
                 <!-- Project content starts here -->
@@ -110,14 +134,17 @@
                         <img src="http://via.placeholder.com/300x280" />
                         <div class="project__text">
                             <h4 class="project__text-title">PROJECT TITLE</h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Sequi similique, fuga libero
-                                quia quaerat, doloremque iure sapiente repellat
-                                culpa ipsam debitis nobis saepe, repellendus
-                                eveniet repudiandae accusamus animi distinctio
-                                quam.
-                            </p>
+
+                            <div id="projectPara">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Sequi similique, fuga
+                                    libero quia quaerat, doloremque iure
+                                    sapiente repellat culpa ipsam debitis nobis
+                                    saepe, repellendus eveniet repudiandae
+                                    accusamus animi distinctio quam.
+                                </p>
+                            </div>
                         </div>
 
                         <div class="project__footer">
@@ -131,9 +158,7 @@
                             </div>
                             <div class="project-code-btn">
                                 <a class="icon" href="" target="_blank"
-                                    ><i
-                                        class="fa-solid fa-eye fa-xl"
-                                    ></i
+                                    ><i class="fa-solid fa-eye fa-xl"></i
                                 ></a>
                             </div>
                         </div>
@@ -144,7 +169,7 @@
                         <img src="http://via.placeholder.com/300x280" />
                         <div class="project__text">
                             <h4 class="project__text-title">PROJECT TITLE</h4>
-                            <p>
+                            <p class="project-para">
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit. Sequi similique, fuga libero
                                 quia quaerat, doloremque iure sapiente repellat
@@ -158,16 +183,12 @@
                             <div class="project-code-btn">
                                 <!-- add project code link here -->
                                 <a class="icon" href="" target="_blank">
-                                    <i
-                                        class="fa-solid fa-code fa-xl"
-                                    ></i>
+                                    <i class="fa-solid fa-code fa-xl"></i>
                                 </a>
                             </div>
                             <div class="project-code-btn">
                                 <a class="icon" href="" target="_blank"
-                                    ><i
-                                        class="fa-solid fa-eye fa-xl"
-                                    ></i
+                                    ><i class="fa-solid fa-eye fa-xl"></i
                                 ></a>
                             </div>
                         </div>
@@ -178,7 +199,7 @@
                         <img src="http://via.placeholder.com/300x280" />
                         <div class="project__text">
                             <h4 class="project__text-title">PROJECT TITLE</h4>
-                            <p>
+                            <p class="project-para">
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit. Sequi similique, fuga libero
                                 quia quaerat, doloremque iure sapiente repellat
@@ -192,16 +213,12 @@
                             <div class="project-code-btn">
                                 <!-- add project code link here -->
                                 <a class="icon" href="" target="_blank">
-                                    <i
-                                        class="fa-solid fa-code fa-xl"
-                                    ></i>
+                                    <i class="fa-solid fa-code fa-xl"></i>
                                 </a>
                             </div>
                             <div class="project-code-btn">
                                 <a class="icon" href="" target="_blank"
-                                    ><i
-                                        class="fa-solid fa-eye fa-xl"
-                                    ></i
+                                    ><i class="fa-solid fa-eye fa-xl"></i
                                 ></a>
                             </div>
                         </div>
@@ -212,7 +229,8 @@
                         <img src="http://via.placeholder.com/300x280" />
                         <div class="project__text">
                             <h4 class="project__text-title">PROJECT TITLE</h4>
-                            <p>
+
+                            <p class="project-para">
                                 Lorem ipsum, dolor sit amet consectetur
                                 adipisicing elit. Sequi similique, fuga libero
                                 quia quaerat, doloremque iure sapiente repellat
@@ -226,16 +244,12 @@
                             <div class="project-code-btn">
                                 <!-- add project code link here -->
                                 <a class="icon" href="" target="_blank">
-                                    <i
-                                        class="fa-solid fa-code fa-xl"
-                                    ></i>
+                                    <i class="fa-solid fa-code fa-xl"></i>
                                 </a>
                             </div>
                             <div class="project-code-btn">
                                 <a class="icon" href="" target="_blank"
-                                    ><i
-                                        class="fa-solid fa-eye fa-xl"
-                                    ></i
+                                    ><i class="fa-solid fa-eye fa-xl"></i
                                 ></a>
                             </div>
                         </div>
@@ -245,26 +259,31 @@
 
             <!-- Footer section: Contact Details -->
         </main>
-        <footer class="footer section"  id="contact">
+        <footer class="footer section" id="contact">
             <h2>Get in touch</h2>
             <section class="footer--contacts">
                 <ul class="footer--contacts-icons">
                     <li>
-                        <a href="https://github.com/edlyn-e" target="_blank"
-                             class="footer--contacts-icon"><i class="fa-brands fa-github-square fa-2x"></i
+                        <a
+                            href="https://github.com/edlyn-e"
+                            target="_blank"
+                            class="footer--contacts-icon"
+                            ><i class="fa-brands fa-github-square fa-2x"></i
                         ></a>
                     </li>
                     <li>
                         <a
                             href="https://www.linkedin.com/in/edlyn-evangelista/"
-                            target="_blank" class="footer--contacts-icon"
+                            target="_blank"
+                            class="footer--contacts-icon"
                             ><i class="fa-brands fa-linkedin fa-2x"></i
                         ></a>
                     </li>
-                    <li >
+                    <li>
                         <a
                             href="mailto:edlyn.evangelista@outlook.com"
-                            target="_blank" class="footer--contacts-icon"
+                            target="_blank"
+                            class="footer--contacts-icon"
                             ><i class="fa-solid fa-square-envelope fa-2x"></i
                         ></a>
                     </li>
@@ -272,7 +291,12 @@
             </section>
 
             <p class="footer--para">Edlyn Evangelista | 2022</p>
-            
         </footer>
+
+        <script
+            src="https://kit.fontawesome.com/78a04382fc.js"
+            src="./folio.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
