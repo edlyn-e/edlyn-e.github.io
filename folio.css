@@ -23,12 +23,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 20px;
+  background-color: #fffffe;
+  min-height: 8vh;
+  letter-spacing: 3px;
 }
 .nav-bar__logo {
-  padding: 10px 40px;
+  padding: 20px;
 }
-.nav-bar__list {
+.nav-bar__menu {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -58,7 +60,7 @@ a {
   margin: auto;
 }
 .section__title {
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
   letter-spacing: 3px;
   padding-bottom: 15px;
@@ -215,4 +217,43 @@ a {
 }
 .footer p {
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .section__title {
+    padding-bottom: 30px;
+  }
+  .project__item {
+    position: relative;
+    max-width: 300px;
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+  }
+  .project__item img {
+    height: 280px;
+    width: 260px;
+    display: block;
+    margin: auto;
+    border: 5px solid #fffffe;
+  }
+  .project__item p {
+    display: none;
+  }
+  .project__item a {
+    display: none;
+  }
+  .project__item:hover p {
+    display: contents;
+  }
+  .project__item:hover a {
+    display: contents;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .tech-stack .tech-item {
+    font-size: 15px;
+  }
 }
