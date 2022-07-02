@@ -66,6 +66,10 @@ a {
     font-weight: bold;
 }
 
+p {
+    font-family: "Karla", sans-serif;
+}
+
 // BEM styling
 .nav-bar {
     display: flex;
@@ -129,6 +133,7 @@ a {
     // background-color: palette.$background-card;
 
     @include background-gradient();
+
     height: 80vh;
     align-items: center;
     text-align: center;
@@ -136,6 +141,10 @@ a {
 
     &__content-para {
         padding: 3px;
+    }
+
+    p {
+        font-family: "PT Mono", monospace;
     }
 }
 
@@ -304,6 +313,7 @@ a {
     }
 
     p {
+        font-family: "PT Mono", monospace;
         padding: 20px;
     }
 }

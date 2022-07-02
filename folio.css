@@ -19,6 +19,10 @@ a {
   font-weight: bold;
 }
 
+p {
+  font-family: "Karla", sans-serif;
+}
+
 .nav-bar {
   display: flex;
   flex-wrap: wrap;
@@ -87,6 +91,9 @@ a {
 }
 .landing__content-para {
   padding: 3px;
+}
+.landing p {
+  font-family: "PT Mono", monospace;
 }
 
 .about-me__content {
@@ -226,6 +233,7 @@ a {
   color: #cf995f;
 }
 .footer p {
+  font-family: "PT Mono", monospace;
   padding: 20px;
 }
 
