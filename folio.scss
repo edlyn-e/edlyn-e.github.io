@@ -172,7 +172,8 @@ p {
 }
 
 .tech-stack {
-    background-color: palette.$background-card;
+    // background-color: palette.$background-card;
+    @include background-gradient();
     color: palette.$background;
 
     .tech-gallery {
@@ -184,6 +185,10 @@ p {
     .tech-item {
         margin: 10px 30px 20px 10px;
         font-size: 15px;
+
+        h4 {
+            font-weight: 400;
+        }
 
         &__icon {
             padding-bottom: 10px;
@@ -323,10 +328,11 @@ p {
         #checkbox:checked ~ .nav-bar__menu {
             display: block;
             margin-top: 60px;
+            transition: ease-in;
         }
         .button {
             display: contents;
-            font-size: 40px;
+            font-size: 45px;
             color: palette.$background-card;
             position: absolute;
             top: 0;
@@ -346,6 +352,9 @@ p {
         }
 
         &__menu-item {
+            li {
+                font-size: 50px;
+            }
         }
     }
 

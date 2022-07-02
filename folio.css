@@ -121,7 +121,9 @@ p {
 }
 
 .tech-stack {
-  background-color: #134e5e;
+  background: #134e5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #71b280, #134e5e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #71b280, #134e5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fffffe;
 }
 .tech-stack .tech-gallery {
@@ -135,6 +137,9 @@ p {
 .tech-stack .tech-item {
   margin: 10px 30px 20px 10px;
   font-size: 15px;
+}
+.tech-stack .tech-item h4, .tech-stack .tech-item .project__item a, .project__item .tech-stack .tech-item a, .tech-stack .tech-item .project__item p, .project__item .tech-stack .tech-item p {
+  font-weight: 400;
 }
 .tech-stack .tech-item__icon {
   padding-bottom: 10px;
@@ -241,10 +246,11 @@ p {
   .nav-bar #checkbox:checked ~ .nav-bar__menu {
     display: block;
     margin-top: 60px;
+    transition: ease-in;
   }
   .nav-bar .button {
     display: contents;
-    font-size: 40px;
+    font-size: 45px;
     color: #134e5e;
     position: absolute;
     top: 0;
@@ -259,6 +265,9 @@ p {
   }
   .nav-bar__menu {
     display: none;
+  }
+  .nav-bar__menu-item li {
+    font-size: 50px;
   }
   .section__title {
     padding-bottom: 30px;
