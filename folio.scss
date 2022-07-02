@@ -30,6 +30,20 @@ $border-img-phone: 5px solid palette.$background;
     position: relative;
 }
 
+@mixin background-gradient {
+    background: #134e5e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #71b280,
+        #134e5e
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #71b280,
+        #134e5e
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 // umbrella css
 html {
     scroll-behavior: smooth;
@@ -52,6 +66,10 @@ a {
     font-weight: bold;
 }
 
+p {
+    font-family: "Karla", sans-serif;
+}
+
 // BEM styling
 .nav-bar {
     display: flex;
@@ -63,7 +81,7 @@ a {
     letter-spacing: 3px;
 
     &__logo {
-        padding: 20px;
+        padding: 30px;
     }
 
     #checkbox {
@@ -112,14 +130,21 @@ a {
 
 .landing {
     @include flex;
-    background-color: palette.$background-card;
-    height: 90vh;
+    // background-color: palette.$background-card;
+
+    @include background-gradient();
+
+    height: 80vh;
     align-items: center;
     text-align: center;
     color: palette.$background;
 
     &__content-para {
         padding: 3px;
+    }
+
+    p {
+        font-family: "PT Mono", monospace;
     }
 }
 
@@ -147,7 +172,8 @@ a {
 }
 
 .tech-stack {
-    background-color: palette.$background-card;
+    // background-color: palette.$background-card;
+    @include background-gradient();
     color: palette.$background;
 
     .tech-gallery {
@@ -159,6 +185,10 @@ a {
     .tech-item {
         margin: 10px 30px 20px 10px;
         font-size: 15px;
+
+        h4 {
+            font-weight: 400;
+        }
 
         &__icon {
             padding-bottom: 10px;
@@ -253,7 +283,8 @@ a {
 }
 
 .footer {
-    background-color: palette.$background-card;
+    // background-color: palette.$background-card;
+    @include background-gradient();
     color: palette.$background;
 
     text-align: center;
@@ -287,6 +318,7 @@ a {
     }
 
     p {
+        font-family: "PT Mono", monospace;
         padding: 20px;
     }
 }
@@ -296,10 +328,11 @@ a {
         #checkbox:checked ~ .nav-bar__menu {
             display: block;
             margin-top: 60px;
+            transition: ease-in;
         }
         .button {
             display: contents;
-            font-size: 40px;
+            font-size: 45px;
             color: palette.$background-card;
             position: absolute;
             top: 0;
@@ -319,6 +352,9 @@ a {
         }
 
         &__menu-item {
+            li {
+                font-size: 50px;
+            }
         }
     }
 
