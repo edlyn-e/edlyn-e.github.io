@@ -66,6 +66,14 @@ a {
         padding: 20px;
     }
 
+    #checkbox {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+
     &__menu {
         @include flex;
     }
@@ -284,10 +292,45 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+    .nav-bar {
+        #checkbox:checked ~ .nav-bar__menu {
+            display: block;
+            margin-top: 60px;
+        }
+        .button {
+            display: contents;
+            font-size: 40px;
+            color: palette.$background-card;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1vh;
+        }
+
+        #checkbox:checked ~ .button {
+            color: palette.$background-card-hover;
+            text-shadow: 2px 2px palette.$background-card-shadow;
+            display: block;
+            padding: 10px;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__menu-item {
+        }
+    }
+
     .section {
         &__title {
             padding-bottom: 30px;
         }
+    }
+
+    .about-me {
+        margin: 15px;
+        font-size: 14px;
     }
 
     .project {
@@ -327,7 +370,7 @@ a {
     }
 
     .tech-stack {
-        .tech-item {
+        &__icon {
             font-size: 15px;
         }
     }

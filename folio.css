@@ -30,6 +30,12 @@ a {
 .nav-bar__logo {
   padding: 20px;
 }
+.nav-bar #checkbox {
+  display: none;
+}
+.nav-bar .button {
+  display: none;
+}
 .nav-bar__menu {
   display: flex;
   justify-content: center;
@@ -220,8 +226,34 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .nav-bar #checkbox:checked ~ .nav-bar__menu {
+    display: block;
+    margin-top: 60px;
+  }
+  .nav-bar .button {
+    display: contents;
+    font-size: 40px;
+    color: #628395;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1vh;
+  }
+  .nav-bar #checkbox:checked ~ .button {
+    color: #d0ce7c;
+    text-shadow: 2px 2px #cf995f;
+    display: block;
+    padding: 10px;
+  }
+  .nav-bar__menu {
+    display: none;
+  }
   .section__title {
     padding-bottom: 30px;
+  }
+  .about-me {
+    margin: 15px;
+    font-size: 14px;
   }
   .project__item {
     position: relative;
@@ -253,7 +285,7 @@ a {
     flex-wrap: wrap;
     padding: 15px;
   }
-  .tech-stack .tech-item {
+  .tech-stack__icon {
     font-size: 15px;
   }
 }
