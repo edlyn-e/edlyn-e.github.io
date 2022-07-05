@@ -31,16 +31,16 @@ $border-img-phone: 5px solid palette.$background;
 }
 
 @mixin background-gradient {
-    background: #134e5e; /* fallback for old browsers */
+    background: palette.$background-card; /* fallback for old browsers */
     background: -webkit-linear-gradient(
         to left,
-        #71b280,
-        #134e5e
+        palette.$background-card-hover,
+        palette.$background-card
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
         to left,
-        #71b280,
-        #134e5e
+        palette.$background-card-hover,
+        palette.$background-card
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
