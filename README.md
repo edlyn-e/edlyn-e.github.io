@@ -1,7 +1,7 @@
 ## Portfolio Project 
 The goal of this project is to build a portofolio to showcase and demonstrate my learning and understanding of the languages and tools I have acquired and accumulated so far. The aim is to build a functional portfolio that will be the foundation of my final portfolio at the end of my course with _nology.
 
-<a href="https://edlyn-e.github.io/">See it live!</a>
+<a href="https://edlyn-e.github.io/" target="_blank">See it live!</a>
 
 ### Overview
 In the building and creation of this project to satisfy the MVP criteria, I primarily used HTML, CSS and SCSS as well as Github and command line to drive the process. 
